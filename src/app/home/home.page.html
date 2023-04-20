@@ -1,20 +1,99 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-img
+    src="../../assets/icon/tree-logo.png"
+  ></ion-img>
+
+
+  <ion-buttons slot="end">  <ion-button size="small" fill="clear" color="light" > About</ion-button></ion-buttons>
+
+</ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row  class="top">
+       
+            <ion-img
+        src="../../assets/tree.jpg"
+      ></ion-img>
+       
+       
+           
+           <ion-text>Träd är en mångårig växt som är bunden till ståndort och består av ved. Ett träd har en eller flera stammar som bär upp hela trädet från roten. Veden ger träden egenskapen att bli mycket gamla och stora. Veden består av cellulosa och lignin, som är en form av limsubstans. Wikipedia</ion-text>
+      
+        
+    </ion-row>
+    <ion-row  class="middel-top">
+       
+    
+  
+</ion-row>
+    <ion-row class="middle">
+      <ion-col size="12" size-sm>
+        <ion-img
+          src="../../assets/tree_2.jpg"
+        ></ion-img>
+      </ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-col size="12" size-sm [hidden]="checkPlatform()=== 'true'">
+        <h1>Andra typ av träd</h1>
+        <ion-text>Ginkgo eller kinesiskt tempelträd är ett unikt träd, den enda arten i sin division. I och med att den är en nakenfröig växt är dess närmaste släktingar kottepalmer och barrträd. Den är mycket lik de växter som den härstammar från, och som fanns för mer än 100 miljoner år sedan</ion-text>
+      </ion-col>
+
+      <ion-col size="12" size-sm [hidden]="checkPlatform()=== 'true'">
+        <ion-img
+          src="../../assets/tree_3.jpg"
+        ></ion-img>
+      </ion-col>
+
+    
+    </ion-row>
+
+    <ion-row class="bottom" >
+      <ion-col size="12" size-sm>
+        <ion-list lines="none">
+          <ion-list-header>Om</ion-list-header>
+
+          <ion-item>
+            <a href="https://www.google.com/?safe=active&ssui=on">google</a>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <ion-list lines="none">
+          <ion-list-header>Sociala medier</ion-list-header>
+
+          <ion-item tappable>
+            <ion-label>
+              <a href="https://www.google.com/?safe=active&ssui=on">Facebook</a>
+            </ion-label>
+
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-item>
+
+          <ion-item
+            tappable
+            onclick="window.open('https://www.google.com/?safe=active&ssui=on')"
+          >
+            <ion-label> Snap </ion-label>
+
+            <ion-icon name="logo-snapchat"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <ion-list lines="none">
+          <ion-list-header>Kontakt</ion-list-header>
+
+          <ion-item> Adress: </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="bottom-copyright-text"> © 2023 Test </ion-row>
+  </ion-grid>
 </ion-content>

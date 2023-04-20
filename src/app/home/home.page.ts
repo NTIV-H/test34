@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Platform, NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+ 
+  constructor(public platform: Platform, public nav: NavController) {}
 
-  constructor() {}
+  
+  checkPlatform() {
+    if (this.platform.is('mobile') === true) {
+      return 'true';
+    } else {
+      return 'false';
+    }
+  }
 
+  navPage(){
+    this.nav.navigateForward('test')
+  }
 }
